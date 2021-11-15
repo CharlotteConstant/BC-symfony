@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdController!{% endblock %}
+
+{% block body %}
+
+    {% for ad in ads %}
+    <p>{{ ad.title }}</p>
+        <p>{{ ad.description }}</p>
+        <p>{{ ad.price }} €</p>
+        <p>{{ ad.model.brand.name }} {{ ad.model.name }}</p>
+        <hr>
+
+    {% endfor %}
+{% endblock %}
